@@ -3,11 +3,7 @@
   {{#each model as |favorite|}}
     <li>
       <LinkTo @route="detail" @model={{favorite.imdbID}}>
-<<<<<<< HEAD
         {{favorite.title}}
-=======
-        {{favorite.name}}
->>>>>>> f56c37b... added user auth and cleaner pages
       </LinkTo>
     </li>
   {{else}}

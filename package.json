@@ -48,12 +48,9 @@
     "emberfire": "^3.0.0-rc.6",
     "eslint-plugin-ember": "^6.2.0",
     "eslint-plugin-node": "^9.0.1",
-<<<<<<< HEAD
-=======
     "firebase": "^7.2.1",
     "glob": "^4.5.3",
     "http-proxy": "^1.18.0",
->>>>>>> f56c37b... added user auth and cleaner pages
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.4"
   },

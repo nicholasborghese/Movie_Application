@@ -1,5 +1,4 @@
 import Route from '@ember/routing/route';
-<<<<<<< HEAD
 import RSVP from 'rsvp';
 
 export default Route.extend({
@@ -19,11 +18,5 @@ export default Route.extend({
           return favorites.get('firstObject');
         })
     });
-=======
-
-export default Route.extend({
-  model(params) {
-    return this.store.queryRecord('movie', {i: params.id});
->>>>>>> f56c37b... added user auth and cleaner pages
   }
 });
