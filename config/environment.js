@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 'use strict';
 
 module.exports = function(environment) {
@@ -45,6 +46,14 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+  }
+
+  try {
+    const custom = require('./custom-config');
+    ENV.OMDB_API_KEY = custom.config.OMDB_API_KEY;
+    ENV.firebase = custom.config.firebase;
+  } catch (err) {
+    console.log('config/custom-config.js not found');
   }
 
   return ENV;

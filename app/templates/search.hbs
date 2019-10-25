@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-6 justify-content-center input-group m-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Title</span>
+      </div>
+      <Input type="text" class="form-control" aria-label="Text input with dropdown button" @value={{this.value}} />
+      <div class="input-group-append" id="button-addon4">
+        <button class="btn btn-outline-secondary" type="button" {{action "submit" value}}>Go</button>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    {{#each this.model as |movie|}}
+      <LinkTo @route="detail" @model={{movie.id}}>
+        <MovieCard @title={{movie.Title}} @year={{movie.Year}} @poster={{movie.Poster}} />
+      </LinkTo>
+    {{/each}}
+  </div>
+</div>
+
+{{outlet}}

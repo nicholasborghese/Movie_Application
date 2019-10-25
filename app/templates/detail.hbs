@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="card m-3 text-center" style="width: 20rem;">
+<<<<<<< HEAD
+      <img class="card-img-top" src={{model.movie.Poster}} alt="Card image cap">
+    </div>
+    <div class="col-5 py-3">
+      <h3>{{model.movie.Title}}</h3>
+=======
+      <img class="card-img-top" src={{model.Poster}} alt="Card image cap">
+    </div>
+    <div class="col-5 py-3">
+      <h3>{{model.Title}}</h3>
+>>>>>>> f56c37b... added user auth and cleaner pages
+      {{#if model.favorite}}
+        <button {{action 'unsave'}}>Unsave</button>
+      {{else}}
+        <button {{action 'save'}}>Save</button>
+      {{/if}}
+<<<<<<< HEAD
+      <h4>{{model.movie.Year}} {{model.movie.Rated}}</h4>
+      <h5>Genre: {{model.movie.Genre}}</h5>
+      <p>{{model.movie.Plot}}</p>
+      <h6>Director: {{model.movie.Director}}</h6>
+      <h6>Actors/Actresses: {{model.movie.Actors}}</h6>
+      <h6>Rating: {{model.movie.imdbRating}}/10</h6>
+      <h6>Votes: {{model.movie.imdbVotes}}</h6>
+=======
+      <h4>{{model.Year}} {{model.Rated}}</h4>
+      <h5>Genre: {{model.Genre}}</h5>
+      <p>{{model.Plot}}</p>
+      <h6>Director: {{model.Director}}</h6>
+      <h6>Actors/Actresses: {{model.Actors}}</h6>
+      <h6>Rating: {{model.imdbRating}}/10</h6>
+      <h6>Votes: {{model.imdbVotes}}</h6>
+>>>>>>> f56c37b... added user auth and cleaner pages
+    </div>
+  </div>
+</div>
+
+{{outlet}}

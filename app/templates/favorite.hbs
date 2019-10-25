@@ -1,0 +1,18 @@
+<h2>Favorites</h2>
+<ol>
+  {{#each model as |favorite|}}
+    <li>
+      <LinkTo @route="detail" @model={{favorite.imdbID}}>
+<<<<<<< HEAD
+        {{favorite.title}}
+=======
+        {{favorite.name}}
+>>>>>>> f56c37b... added user auth and cleaner pages
+      </LinkTo>
+    </li>
+  {{else}}
+    <li>You got no favs</li>
+  {{/each}}
+</ol>
+
+{{outlet}}
