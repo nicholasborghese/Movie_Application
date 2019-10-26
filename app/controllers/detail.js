@@ -5,8 +5,11 @@ export default Controller.extend({
     save() {
       const newFavorite = this.store.createRecord('favorite', {
         title: this.get('model.movie.Title'),
-        imdbID: this.get('model.movie.id')
-      });      newFavorite.save()
+        imdbID: this.get('model.movie.id'),
+        poster: this.get('model.movie.Poster'),
+        year: this.get('model.movie.Year')
+      });      
+      newFavorite.save()
         .then(() => {
           this.set('model.favorite', newFavorite)
         });

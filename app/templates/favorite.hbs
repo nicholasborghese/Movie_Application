@@ -1,14 +1,16 @@
-<h2>Favorites</h2>
-<ol>
-  {{#each model as |favorite|}}
-    <li>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <h1>Favorites</h1>
+  </div>
+  <div class="row justify-content-center">
+    {{#each model as |favorite|}}
       <LinkTo @route="detail" @model={{favorite.imdbID}}>
-        {{favorite.title}}
+        <MovieCard @title={{favorite.title}} @year={{favorite.year}} @poster={{favorite.poster}} />
       </LinkTo>
-    </li>
-  {{else}}
-    <li>You got no favs</li>
-  {{/each}}
-</ol>
+    {{else}}
+      <h3>You have no favorites, yet!</h3>
+    {{/each}}
+  </div>
+</div>
 
 {{outlet}}
